@@ -1,0 +1,233 @@
+:root {
+    --bg: #faf8f5;
+    --card-bg: #ffffff;
+    --text: #2b2b2b;
+    --muted: #7a7a7a;
+    --accent: #b5654a;
+    --accent-dark: #94503a;
+    --border: #e8e2da;
+    --danger: #b3413a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header.site-header {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 2rem 1.5rem 1.5rem;
+    text-align: center;
+}
+
+header.site-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+}
+
+header.site-header p {
+    color: var(--muted);
+    margin: 0.4rem 0 0;
+    font-style: italic;
+}
+
+.container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.btn:hover { background: var(--accent-dark); }
+
+.btn-secondary {
+    background: #6b6b6b;
+}
+.btn-secondary:hover { background: #4f4f4f; }
+
+.btn-danger {
+    background: var(--danger);
+}
+.btn-danger:hover { background: #8f322c; }
+
+.btn-small {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.post-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.post-card img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.post-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.post-meta .locatie::before {
+    content: "📍 ";
+}
+
+.post-meta .datum::before {
+    content: "📅 ";
+    margin-left: 0.8rem;
+}
+
+.post-title {
+    margin: 0 0 0.3rem;
+    font-size: 1.5rem;
+}
+
+.post-text {
+    white-space: pre-wrap;
+    margin-bottom: 1rem;
+}
+
+.post-actions {
+    display: flex;
+    gap: 0.6rem;
+    border-top: 1px solid var(--border);
+    padding-top: 0.8rem;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--muted);
+    padding: 3rem 1rem;
+}
+
+form.post-form {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #fffefc;
+}
+
+.form-group textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+.form-row .form-group { flex: 1; }
+
+.huidige-afbeelding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+.huidige-afbeelding img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+}
+
+.alert {
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.2rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.92rem;
+}
+.alert-error {
+    background: #fbe8e6;
+    color: var(--danger);
+    border: 1px solid #f0c4c0;
+}
+.alert-success {
+    background: #e7f3e6;
+    color: #3a6b34;
+    border: 1px solid #c6e0c3;
+}
+
+.terug-link {
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+}
+.terug-link:hover { text-decoration: underline; }
+
+.confirm-note {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
